@@ -4,22 +4,33 @@
 
 ## 1. ⁠Jogo escolhido: Qual jogo o grupo escolheu? Quais são suas regras?
 
-Pontas e quadrados. Cada jogador, na sua vez, deve marcar uma linha horizontal entre dois pontos adjacentes.
-Se um jogador completar um quadrado, ele marca o quadrado e ganha um ponto, podendo jogar novamente.
-O jogo termina quando todas as linhas foram marcadas. O jogador que marcar mais quadrados vence.
+O jogo escolhido foi Pontas e quadrados. Cada jogador na sua rodada, na sua vez, deve marcar uma linha horizontal ou vertical entre dois pontos adjacentes que ainda não estejam conectados.
+
+Se um jogador completar um quadrado, ele marca 1 ponto e recebe o direito de realizar uma nova jogada. Caso não complete nenhum quadrado a vez passa para o adversário.
+
+O jogo termina quando todas as linhas forem preenchidas, sendo declarado vencedor quem conquistar mais quadrados.
 
 ## 2. ⁠Estado inicial: Como o jogo começa? Como esse estado pode ser representado?
 
-O jogo começa com um tabuleiro vazio, composto por 11x11 pontos, onde os jogadores podem marcar linhas entre pontos adjacentes (na horizontal e vertical)
-O estado do jogo pode ser representado por uma matriz ou lista que indica quais linhas foram marcadas e quais quadrados foram completados.
+O jogo começa com um tabuleiro vazio, composto por 6x6 pontos, que permitem a formação de 25 quadrados (5x5).
+
+Computacionalmente, o estado pode ser representado por uma matriz de 11x11, na qual são armazenadas as posiçõs dos pontos, das linhas horizontais e verticais e dos quadrados.
+
+No início do jogo, nenhuma linha está marcada e ambos os jogadores possuem pontuação zero. O estado deve armazenar o jogador responsável pela próxima jogada e a pontuação de cada participante.
 
 ## 3. ⁠Jogadores: Quantos jogadores participam? Quem são MAX e MIN?
 
-Dois jogadores. O computador seria o jogador MAX e o humano seria o jogador MIN.
+O jogo possui dois jogadores. O computador seria o jogador MAX, com o objetivo de maximizar sua vantagem na pontuação e o humano seria o jogador MIN, que tenta minimizar essa vantagem.
 
 ## 4. ⁠Ações possiveis: Quais ações cada jogador pode executar? existem restrições?
 
-Marcar uma linha entre dois pontos adjacentes. Não é permitido marcar uma linha que já foi marcada.
+Em cada rodada dos jogadores eles podem marcar uma linha horizontal ou vertical entre dois pontos adjacentes. Porém não é permitido:
+- marcar uma linha que já foi marcada;
+- marcar linhas diagonais;
+- tentar conectar pontos que não estão ligados;
+- marcar linhas onde ultrapasse os limites do tabuleiro
+
+O tabuleiro possui 60 linhas possíveis, sendo 40 horizontais e 30 verticais. A cada jogada uma dessas linhas deixa de estar disponível.
 
 # 5. ⁠Função de transição: Como o estado do jogo muda após cada ação?
 
