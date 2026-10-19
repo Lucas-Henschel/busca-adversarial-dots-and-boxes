@@ -1,4 +1,4 @@
-# Definição do jogo: Pontas e quadrados
+# Definição do jogo: Pontos e quadrados
 
 **Acadêmicos**: Ana Caroline Henschel, Christian Alves do Santos, Lucas Gabriel Henschel, León Máximos Ramos e Nicolle Formigari Poncio.
 
@@ -30,7 +30,7 @@ Em cada rodada dos jogadores eles podem marcar uma linha horizontal ou vertical 
 - tentar conectar pontos que não estão ligados;
 - marcar linhas onde ultrapasse os limites do tabuleiro
 
-O tabuleiro possui 60 linhas possíveis, sendo 40 horizontais e 30 verticais. A cada jogada uma dessas linhas deixa de estar disponível.
+O tabuleiro possui 60 linhas possíveis, sendo 30 horizontais e 30 verticais. A cada jogada uma dessas linhas deixa de estar disponível.
 
 # 5. ⁠Função de transição: Como o estado do jogo muda após cada ação?
 
