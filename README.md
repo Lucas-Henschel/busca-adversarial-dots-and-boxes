@@ -1,4 +1,4 @@
-# Definição do jogo: Pontas e quadrados
+# Definição do jogo: Pontos e quadrados
 
 **Acadêmicos**: Ana Caroline Henschel, Christian Alves do Santos, Lucas Gabriel Henschel, León Máximos Ramos e Nicolle Formigari Poncio.
 
@@ -25,12 +25,13 @@ O jogo possui dois jogadores. O computador seria o jogador MAX, com o objetivo d
 ## 4. ⁠Ações possiveis: Quais ações cada jogador pode executar? existem restrições?
 
 Em cada rodada dos jogadores eles podem marcar uma linha horizontal ou vertical entre dois pontos adjacentes. Porém não é permitido:
+
 - marcar uma linha que já foi marcada;
 - marcar linhas diagonais;
 - tentar conectar pontos que não estão ligados;
 - marcar linhas onde ultrapasse os limites do tabuleiro
 
-O tabuleiro possui 60 linhas possíveis, sendo 40 horizontais e 30 verticais. A cada jogada uma dessas linhas deixa de estar disponível.
+O tabuleiro possui 60 linhas possíveis, sendo 30 horizontais e 30 verticais. A cada jogada uma dessas linhas deixa de estar disponível.
 
 # 5. ⁠Função de transição: Como o estado do jogo muda após cada ação?
 
