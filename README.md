@@ -52,3 +52,28 @@ Cada quadrado completado vale 1 ponto para o jogador que desenhou a última linh
 ## 8. ⁠Tipo de jogo: O jogo é determinístico ou estocástico? Por quê?
 
 Determinístico, pois não existe aleatoriedade no jogo. Todas as ações possíveis e suas consequências são conhecidas pelos jogadores.
+
+## 9. Algoritmo de busca competitiva: Qual algoritmo será utilizado ?
+
+Algoritmo Minimax com poda Alfa-Beta
+
+## 10. Como o jogo será representado em Python?
+
+A interface interativa é construída com ipywidgets e Matplotlib, e o placar usa HTML/CSS inline.
+
+## 11. Como o programa identificará as ações válidas e verificará o término do jogo?
+
+O jogo utiliza a função jogadas_legais() para percorrer a matriz 11 × 11 e identificar as linhas ainda disponíveis (ficam com o valor 0). A função eh_terminal() verifica se não existem mais jogadas válidas. Quando todas as linhas estiverem preenchidas, a partida termina e o vencedor é determinado pela pontuação.
+
+## 12. Como o algoritmo escolherá a melhor jogada considerando as possíveis respostas do adversário?
+
+O máquina utiliza o algoritmo Minimax com poda Alfa-Beta para simular jogadas e possíveis respostas do adversário. A máquina (MAX) busca maximizar a avaliação do tabuleiro, enquanto o humano (MIN) busca minimizá-la. A função heurística considera a diferença de pontuação e as oportunidades de fechar quadrados. A poda Alfa-Beta elimina análises desnecessárias, e o algoritmo seleciona a jogada com a melhor avaliação, respeitando os turnos extras quando um quadrado é completado.
+
+## 13. O algoritmo escolhido foi adequado? Quais foram suas limitações?
+
+Sim, o algoritmo foi adequado, pois permite a máquina analisar possíveis jogadas e respostas do adversário, considerando também os turnos extras. Entretanto, sua principal limitação é o alto custo computacional, devido a grande quantidade de jogadas possíveis. Por isso, foi necessário utilizar profundidade adaptativa e uma função heurística, limitando a análise de jogadas futuras. Além disso, a heurística implementada não considera explicitamente as cadeias de quadrados, que são importantes para a estratégia do jogo. Dessa forma, a máquina pode tomar decisões que parecem vantajosas no curto prazo, mas que não representam a melhor estratégia a longo prazo.
+
+## 14. Outro algoritmo de busca competitiva poderia apresentar melhores resultados? Por quê?
+
+Não, porque por exemplo o minimax puro seria muito custoso computacionalmente, enquanto a versão utilizada, que é o minimax com poda alfa-beta descarta as ramificações desnecessárias.
+
